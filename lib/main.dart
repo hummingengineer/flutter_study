@@ -39,7 +39,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          const Text('A random idea:'),
+          const Text('A random AWESOME idea:'),
           Text(appState.current.asLowerCase)
         ],
       )
