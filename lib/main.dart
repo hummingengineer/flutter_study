@@ -60,11 +60,15 @@ class MyHomePage extends StatelessWidget {
           children: [
             BigCard(pair: pair),
             const SizedBox(height: 10),
-            ElevatedButton(
-                onPressed: () {
-                  appState.getNext();
-                },
-                child: const Text('Next'),
+            Row(
+              children: [
+                ElevatedButton(
+                    onPressed: () {
+                      appState.getNext();
+                    },
+                    child: const Text('Next'),
+                ),
+              ],
             ),
           ],
         ),
