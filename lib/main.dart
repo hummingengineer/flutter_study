@@ -70,6 +70,7 @@ class MyHomePage extends StatelessWidget {
                     icon: Icon(icon),
                     label: const Text('Like')
                 ),
+                const SizedBox(width: 10),
                 ElevatedButton(
                     onPressed: () {
                       appState.getNext();
