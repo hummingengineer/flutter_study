@@ -62,6 +62,7 @@ class MyHomePage extends StatelessWidget {
             BigCard(pair: pair),
             const SizedBox(height: 10),
             Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 ElevatedButton.icon(
                     onPressed: () {
