@@ -46,6 +46,8 @@ class MyAppState extends ChangeNotifier {
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +56,7 @@ class MyHomePage extends StatelessWidget {
           SafeArea(
             child: NavigationRail(
               extended: false,
-              destinations: [
+              destinations: const [
                 NavigationRailDestination(
                   icon: Icon(Icons.home),
                   label: Text('Home'),
@@ -73,7 +75,7 @@ class MyHomePage extends StatelessWidget {
           Expanded(
             child: Container(
               color: Theme.of(context).colorScheme.primaryContainer,
-              child: GeneratorPage(),
+              child: const GeneratorPage(),
             ),
           ),
         ],
@@ -83,6 +85,8 @@ class MyHomePage extends StatelessWidget {
 }
 
 class GeneratorPage extends StatelessWidget {
+  const GeneratorPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();
@@ -100,7 +104,7 @@ class GeneratorPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           BigCard(pair: pair),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -109,14 +113,14 @@ class GeneratorPage extends StatelessWidget {
                   appState.toggleFavorite();
                 },
                 icon: Icon(icon),
-                label: Text('Like'),
+                label: const Text('Like'),
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {
                   appState.getNext();
                 },
-                child: Text('Next'),
+                child: const Text('Next'),
               ),
             ],
           ),
