@@ -165,6 +165,10 @@ class GeneratorPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Expanded(
+            flex: 3,
+            child: HistoryListView(),
+          ),
           BigCard(pair: pair),
           const SizedBox(height: 10),
           Row(
