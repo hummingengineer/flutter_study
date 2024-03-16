@@ -169,6 +169,7 @@ class GeneratorPage extends StatelessWidget {
             flex: 3,
             child: HistoryListView(),
           ),
+          const SizedBox(height: 10),
           BigCard(pair: pair),
           const SizedBox(height: 10),
           Row(
