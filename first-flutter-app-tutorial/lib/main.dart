@@ -247,6 +247,8 @@ class FavoritesPage extends StatelessWidget {
       );
     }
 
-    return Column();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+    );
   }
 }
